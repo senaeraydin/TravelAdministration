@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "Verona";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style=" position: relative; margin-bottom: 40px; ">
+    <img style="width: 100%; height: 670px;" src="~/Content/images/VERONA_.jpg" alt="Verona-photo">
+    <p class="blinking"
+       style="position: absolute; margin-left: 35%; font-size: 100px; margin-top: -400px;  text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        VERONA
+    </p>
+</div>
+
+<div class="about" style="display: flex; margin: 0px 5px; ">
+    <div class="about-photo1a">
+        <img src="~/Content/images/licensed-image-1.jpg" alt="Photos" style="width:100%; border-radius: 3%;">
+    </div>
+
+    <div style="width: 35%; height: auto; margin: 5% 5%; padding-top: 4%; padding-left: 1%; padding-right: 1%; border: 2px solid brown;  border-radius: 10px; font-size: 22px; ">
+        <h class="majesty" style="color: rgb(148, 79, 19); font-weight: bold;">Verona</h>
+        <p style="color: black; font-size: 20px; padding-top: 2%; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            A Meeting Point of History and Romance
+            Nestled in the heart of Italy, Verona is famous for Shakespeare's "Romeo and Juliet" and captivates with
+            its rich history and romantic ambiance. A UNESCO World Heritage site, the city is renowned for
+            impressive historical structures like the Roman-era Arena di Verona.
+            Juliet's House (Casa di Giulietta) is considered a symbol of love and inspires visitors from all over
+            the world. The delicious Italian cuisine, vibrant markets, and chic restaurants are must-visits for food
+            enthusiasts.
+        </p>
+    </div>
+    <div class="about-photo2a">
+        <img src="~/Content/images/VERONA3.jpg" alt=" Photos" style="width:100%; border-radius: 3%;">
+    </div>
+</div>
+
+
+
+<!-- Places div starts -->
+<div class="placeheada" style="margin-top: 0px; margin-bottom: 0px;  ">
+    <h style=" color: rgb(148, 79, 19); font-size: 35px;"><b>PLACES YOU SHOULD SEE IN VERONA</b></h>
+</div>
+
+<div class="places" style="display: flex; flex-wrap: wrap;">
+    @{
+        string[] placeHead = new string[] { " Arena Di Verona", "Piazza Bra", "Piazza Delle Erbe" };
+        string[] placeImage = new string[] { "/Content/images/Arena-di-VERONA.jpg", "/Content/images/piazza-bra-verona.jpg", "/Content/images/piazza-delle-erbe-verona.jpg" };
+        string[] placeParagraph = new string[] {" Arena di Verona: Experience the Magic of Ancient Rome Located in the historic city of Verona, Italy, the Arena di Verona is a magnificent amphitheater dating  back to ancient Roman times. Built in the 1st century AD, it is considered one of the best-preserved ancient arenas in the world today.Known especially for its famous opera festival held during the summer  months. The open-air performances offer a unique cultural experience.  The Arena impresses with its striking architecture and historical ambiance,  transporting visitors back in time. Visiting the Arena is also an excellent starting point for exploring the other  historical and cultural treasures of Verona.",
+                                                "Discover Verona's Gem: Piazza Bra  A must-visit in Verona: Piazza Bra. Nestled in the historical and cultural heart of the city, this square captivates visitors with its vibrant cafes and restaurants, pulsating with local life and offering authentic Italian flavors. The square's most striking structure is the ancient Arena di Verona, a Roman amphitheater known for its  stunning opera performances in the summer. Its impressive architecture leaves visitors in awe. Also, Piazza Bra is conveniently close to other tourist attractions in Verona. Famous spots like  Juliet's Balcony are just a short walk away.",
+                                                "Piazza Delle Erbe: The Historical Heart of Verona Discover the enchanting atmosphere of Verona at Piazza Delle Erbe. This medieval square, with its colorful buildings, historic fountains, and vibrant streets, is one of the city's most charming spots. The Madonna Verona Fountain, dating back to the 14th century, is a striking feature in the square. Around it, you can find local souvenirs in the shops and taste the flavors of Italian cuisine in the  restaurants.  During your visit to Verona, don't miss the unique atmosphere and historical beauty of Piazza Delle Erbe!"};
+    }
+    @for (int i = 0; i <= 2; i++)
+    {
+
+        <div class="towns" style="background-color: white; border: 1px solid rgb(205, 111, 30); border-radius: 3%;">
+            <h class="headinga" style=" font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(106, 52, 5);">@placeHead[i]</h>
+            <img src="@placeImage[i]" style="width: 90%; margin: 5% 5%; border-radius: 2%;" alt="@placeImage[i]">
+            <p>@placeParagraph[i]</p>
+        </div>
+    }
+
+</div>
+
+
+<!-- Places div ends -->
+<!-- Restaurants div starts -->
+<div style="text-align: center; margin-bottom: 25px;">
+    <p style="font-size: 180%; color: rgb(148, 79, 19); font-size: 35px; font-weight: bold;">
+        Explore Must-Visit Food Destinations in Verona
+    </p>
+</div>
+<div class="places" style="display: flex; flex-wrap: wrap;">
+    @{
+        string[] restaurantHead = new string[] { "L'Evangelista", "Pizzeria Porto", "Ristorante Mare Nostro", "Special & Mr Martini", " Hosteria 17", "Bruschetteria Redoro" };
+        string[] restaurantImage = new string[] { "/Content/images/LEvangelistaEnoteca-VERONA.jpg", "/Content/images/Pizzeria-Porto-Verona.jpeg", "/Content/images/Mare-Nostro-Verona.jpg", "/Content/images/SpecialMrMartini-Verona.jpg", "/Content/images/Hosteria-Verona.jpg", "/Content/images/Bruschetteria-Redoro-Verona.jpg" };
+        string[] restaurantParagraph = new string[] { " L'Evangelista Ristorante & Enoteca: A Culinary Highlight in Verona  When exploring Verona, don't miss out on L'Evangelista Ristorante & Enoteca. Nestled in a historic building, this restaurant offers an authentic and warm atmosphere, serving some of the finest  traditional Italian dishes. Conveniently located in the heart of Verona's historic center, close to famous tourist spots, L'Evangelista Ristorante & Enoteca is an ideal choice for an unforgettable dining experience!",
+                                                      "Pizzeria Porto: The Destination for Italian Flavors Pizzeria Porto is the perfect stop for those seeking authentic Italian pizza. Experience the difference with fresh ingredients and expertly prepared dough in every pizza. With a warm atmosphere and a wide menu ranging from Margherita to Quattro Formaggi, it caters to all taste buds. Options include vegan and gluten-free choices. Ideal for family meals and gatherings with friends, Pizzeria Porto is a must-visit for a memorable culinary highlight of your trip!",
+                                                      " Ristorante Mare Nostro: The Charm of the Mediterranean On the seaside, an Italian dream that warms your heart... Ristorante Mare Nostro merges the freshest flavors of the Mediterranean with a sophisticated atmosphere. Whether it’s for a romantic dinner or a special celebration, Mare Nostro welcomes you and your guests with warm hospitality. From seafood to traditional Italian desserts, its extensive menu  appeals to every palate, making this restaurant a must-visit stop on your journey.",
+                                                      "Special & Mr Martini: An Unforgettable Experience  Special & Mr Martini stands out with its unique decoration and warm atmosphere, offering a meticulously designed space. Each room has its own story and aesthetic, providing guests with a distinctive lodging experience. With delicious cuisine and quality service, it promises memorable moments. An ideal choice to make your journey special!",
+                                                      "Hosteria 17: Where Peace and Comfort Meet  Hosteria 17 offers a tranquil escape from the hustle and bustle of the city, providing a warm, homely  feel for its guests. Its modern and comfortable rooms cater thoughtfully to every guest's needs, while  the restaurant serves a variety of flavors that appeal to all palates, highlighting local cuisine. Hosteria 17 is an ideal choice for a memorable experience and a relaxing stay.",
+                                                      "Bruschetteria Redoro: Your New Culinary Destination Bruschetteria Redoro is a must-visit for those looking to embark on a journey to the heart of Italian cuisine. Known for its authentic flavors and cozy atmosphere, this spot is perfect for those eager to  explore traditional bruschettas and the rich Italian culinary culture. With each dish masterfully prepared, Redoro invites you to a genuine Italian experience. Ideal for an unforgettable gastronomic adventure!"};
+        string[] restaurantLink = new string[] { "https://www.ristorantelevangelista.it//", "https://pizzeriaporto.it/", "https://www.marenostropesce.it/", "https://www.ristoranteprincipessa.com/en/", "https://www.hosteria17.it/", "https://bruschetteria-redoro-verona.business.site/" };
+    }
+    @for (int k = 0; k <= 5; k++)
+    {
+        <div class="restaurantsa" style="background-color: white; border: 1px solid rgb(205, 111, 30); border-radius: 3%; ">
+            <h class="headinga" style="color: rgb(106, 52, 5); font-family: Verdana, Geneva, Tahoma, sans-serif;">@restaurantHead[k]</h>
+            <a href=@restaurantLink[k] target="_blank"><img src="@restaurantImage[k]" style="width: 90%; border-radius: 2%; margin: 5% 5%;" alt="@restaurantHead[k]"></a>
+            <p> @restaurantParagraph[k]</p>
+        </div>
+    }
+
+
+</div>
+
+<!-- Restaurants div ends -->
+<!-- Hotel div starts-->
+<div class="hotelheada" style="margin: 50px;">
+    <h style=" color: rgb(148, 79, 19); font-size: 35px; "><b>Discover the Perfect Hotels for Your Verona Adventure</b></h>
+</div>
+<div class="food" style="display: flex; flex-wrap: wrap;">
+    @{
+        string[] hotelHead = new string[] { "Agriturismo Verona", "Hotel Milano & Spa", "Due Torri Hotel", " Relais Fra' Lorenzo", " Hotel Aurora", "Hotel San Pietro" };
+        string[] hotelImage = new string[] { "/Content/images/Agriturismo-Verona.jpg", "/Content/images/hotel-milano-spa-Verona.jpg", "/Content/images/Due-Torri-Verona.jpg", "/Content/images/fralorenzo-Verona.jpg", "/Content/images/hotel-Aurora-Verona.jpg", "/Content/images/Hotel-San-Pietro-Verona.jpg" };
+        string[] hotelLink = new string[] { "https://www.agriturismosanmattia.it/", "https://www.hotelmilanoverona.com/", "https://hotelduetorri.duetorrihotels.com/", "https://www.fralorenzo.com/", "https://hotelaurora.biz/", "https://www.hotelsanpietroverona.it/it/home" };
+        string[] hotelParagraph = new string[] {"Corte San Mattia - Agriturismo Verona: Serenity in Nature’s Embrace Perched with a commanding view of Verona's enchanting landscapes, Corte San Mattia - Agriturismo offers  a peaceful escape amidst nature. This farm hotel, where traditional Italian hospitality meets rustic elegance, is surrounded by vineyards and olive trees. While savoring their home-produced organic food and wines, you're just a stone's throw away from the historical and cultural riches of Verona." ,
+                                                "Discover the Charm of Hotel Milano & Spa Hotel Milano & Spa offers a perfect blend of luxury and comfort for travelers seeking an exceptional  stay. Nestled in a prime location, this hotel provides easy access to local attractions. Indulge in our  elegant rooms, relish the culinary delights at our on-site restaurant, and unwind in the serene ambiance  of our spa. Ideal for both leisure and business, Hotel Milano & Spa is your gateway to an unforgettable  experience.",
+                                                "Discover Elegance at Due Torri Hotel Immerse in luxury at Due Torri Hotel, a gem in the heart of historical elegance. Known for its refined ambiance and impeccable service, this hotel offers an exquisite stay, blending rich history with modern comfort. Perfect for travelers seeking an unforgettable experience in a timeless setting.",
+                                                "Discover the Charm of Relais Fra' Lorenzo Nestled in a tranquil haven, Relais Fra' Lorenzo offers an exquisite retreat for travelers seeking a blend of luxury and serenity. With its breathtaking views, elegant accommodations, and exceptional service, this gem is a perfect escape to experience the beauty and culture of its surroundings. Ideal for those who cherish an intimate and refined travel experience.",
+                                                " Discover the Charm of Hotel Aurora Experience elegance and comfort at Hotel Aurora, a gem in the heart of the city. With its modern amenities, cozy rooms, and exceptional service, Aurora promises a stay that combines luxury with the  warmth of home. Perfect for travelers seeking a memorable and convenient urban retreat.",
+                                                "Discover the Elegance at Hotel San Pietro Experience luxury and comfort at Hotel San Pietro, where every detail is crafted for your utmost satisfaction. Nestled in an exquisite location, this hotel offers a blend of modern amenities and classic charm. Enjoy beautifully appointed rooms, top-tier dining experiences, and impeccable service. Perfect for discerning travelers seeking a refined stay."};
+    }
+    @for (int j = 0; j <= 5; j++)
+    {
+        <div class="hotelsa" style="border: 1px solid rgb(205, 111, 30); border-radius: 3%; background-color: white; ">
+            <h class="headinga" style="color: rgb(106, 52, 5);">@hotelHead[j]</h>
+            <a href=@hotelLink[j] target="_blank"><img src="@hotelImage[j] " style="width: 90%; margin: 5% 5%;" alt="@hotelHead[j]  "></a>
+            <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">@hotelParagraph[j] </p>
+        </div>
+    }
+</div>
+
+
+<!-- Hotel div ends-->
+<div style="width: 100%; height: 170px;">
+
+    <p style="text-align: center; padding-top: 50px; font-size: 180%; color: rgb(148, 79, 19);">
+        "Explore our tours for an unforgettable travel adventure... <a style="text-decoration: none; font-weight: bold; color: #007bff;" href="@Url.Action("Tour_List","Home")">Click Here Now!</a>
+    </p>"
+</div>
+
+<!-- Last part starts -->
+<!-- Last part ends -->

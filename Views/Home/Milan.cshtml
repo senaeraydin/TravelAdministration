@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "Milan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--milan div starts -->
+<div style=" position: relative; margin-bottom: 0px; ">
+    <img style="width: 100%; height: 605px;" src="~/Content/images/milan-photo.jpg" alt="milan-photo">
+    <p class="rome"
+       style="position: absolute; color: rgb(110, 28, 28); font-size: 100px; margin-top: -400px; margin-left:40%; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        MILAN
+    </p>
+</div>
+<!--milan div ends -->
+<div style=" background-color: rgb(249, 230, 230);">
+    <!-- about milan div starts -->
+    <div class="about" style="display: flex; margin: 0px 5px; background-color: rgb(249, 230, 230); ">
+        <div class="about-photo1a">
+            <img src="~/Content/images/people3.png" alt="Photos" style="width:100%; border-radius: 3%;">
+        </div>
+
+        <div style="width: 35%; height: auto; margin: 5% 5%; padding-top: 4%; padding-left: 1%; padding-right: 1%; border: 2px solid brown;  border-radius: 10px; font-size: 22px; ">
+            <h class="majesty" style="color: red;">About Milan</h>
+            <p style="color: black; font-size: 20px; padding-top: 2%; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                Milan is one of the most stylish cities in Europe. Located
+                in the Lombardy region, this fashion and design hub is the second most populous city in Italy after
+                Rome. The city's economy boasts significant revenues from the automotive and fashion sectors, making it
+                a major player in these industries. Milan is particularly influential in the world of fashion, serving
+                as a launching pad for globally renowned fashion brands. The city hosts crucial events in the fashion
+                industry, and it is also a pinnacle in the field of furniture design.
+            </p>
+        </div>
+        <div class="about-photo2a">
+            <img src="~/Content/images/people4.jpg" alt=" Photos" style="width:100%; border-radius: 3%;">
+        </div>
+    </div>
+    <!-- about milan div ends -->
+    <!-- Places div starts -->
+    <div class="placeheada" style="margin-top: 0px; margin-bottom: 0px; background-color: rgb(249, 230, 230);">
+        <h style=" color: red; font-size: 35px;"><b>PLACES YOU SHOULD SEE IN MILAN</b></h>
+    </div>
+
+    <div class="places" style="display: flex; flex-wrap: wrap;">
+        @{
+            string[] placeHead = new string[] { "Duomo Cathedral", "Galleria Vittoria Emanuele II", "Piazza Castello" };
+            string[] placeImage = new string[] { "/Content/images/cathedral.jpg", "/Content/images/galleria.jpeg", "/Content/images/piazza-castello.jpg" };
+            string[] placeParagraph = new string[] {"Construction of the Milan Cathedral, also known as the Duomo Cathedral and the fourth-largest cathedral in Europe, began in 1386 and lasted for almost 500 years. Duomo stands out among Gothic architectural examples worldwide. Inside, you can see valuable and original works from the Renaissance period, among other things, including mummies. You can also climb to the roof of the cathedral, offering a marvelous panoramic view of Milan. Additionally, don't be surprised if you see people touching the bronze door inside – according to a belief, touching this door brings good luck. Feel free to touch it yourself!",
+                                                "Opened in 1865 by King Victor Emmanuel II, this passage is covered with a roof made of glass and iron. The historic structure is adorned with mosaics and sculptures, with a five-story design. Designed by the Bolognese architect Giuseppe Mengoni, the Galleria is also known as ,Milan's living room. The architect Mengoni tragically lost his life by falling from the imposing triumphal arch at the entrance to the passage. The passage is adorned with allegorical representations of Italian patriotism.",
+                                                "After the Duomo, the main attraction in Milan, the castle served as the residence for the noble Visconti and Sforza families in the 12th and\r\n            13th centuries. During the early 19th century, under French rule, the star-shaped walls of the castle were demolished. In 1904, after restoration, Sforzesco Castle was transformed into a museum. Since then,  the castle has been hosting art collections. The Ancient Art Museum inside Sforzesco Castle features masterpieces by Michelangelo and Pieta Rondanini."};
+        }
+        @for (int i = 0; i <= 2; i++)
+        {
+
+            <div class="towns" style="background-color: rgb(249, 230, 230); border: 1px solid rgb(236, 162, 65);border-radius: 3%;">
+                <h class="headinga" style=" font-family: Verdana, Geneva, Tahoma, sans-serif;color:rgb(236, 162, 65);">@placeHead[i]</h>
+                <img src="@placeImage[i]" style="width: 90%; margin: 5% 5%; border-radius: 2%;" alt="@placeImage[i]">
+                <p>@placeParagraph[i]</p>
+            </div>
+        }
+
+    </div>
+    <!-- Places div ends -->
+    <!-- Restaurants div starts -->
+    <div style="text-align: center; margin-bottom: 25px;">
+        <p style="font-size: 200%; color: red;  font-weight: bold;">
+            FOOD PLACES YOU SHOULD DEFINITEL VISIT IN MILAN
+        </p>
+    </div>
+    <div class="places" style="display: flex; flex-wrap: wrap;">
+        @{
+            string[] restaurantHead = new string[] { " Cova Montenapoleone", "Ristorante Savini", "Antico Ristorante Boeucc Milano-dal 1696", "Nobu Milano", "Erba Brusca", "Da Giacomo" };
+            string[] restaurantImage = new string[] { "/Content/images/cova.JPG", "/Content/images/savini.jpg", "/Content/images/antico.jpg", "/Content/images/nobu.jpg", "/Content/images/erba.jpg", "/Content/images/da-giacomo.jpg" };
+            string[] restaurantParagraph = new string[] {"It is one of the  city's most beautiful patisseries. This café is truly famous for its coffee, especially various fruit cakes, and is a very high-quality venue. It was established in 1817.",
+                                                         "Located inside the Vittorio Emanuele II shopping center, this restaurant has an excellent location and ambiance. There are no problems with the service—actually, it's very good. If you're thinking of taking a break, enjoying your meal while watching people come and go in the shopping center, you can go there. Be sure to try the risotto and beef sirloin.",
+                                                         "The restaurant, dating back to 1696, is  located near the Duomo. The ambiance, decor, service, and food are all very successful. The cuisine offers both Italian and international dishes.",
+                                                         "When the elegance of Armani combines  with a Japanese-Peruvian fusion cuisine, it creates a creative and aesthetically high-value place.",
+                                                         "Erba Brusca is a rural-chic retreat alongside the Naviglio Pavese canal whose short and sweet menu features ingredients from the adjoining vegetable garden, tuning diners in with the land. This informal spot is particularly popular on weekends when the Milanese escape to the countryside and the mountains that ring the city. Although the menu by Chef Alice Delcourt changes regularly, a reliably delicious mainstay is the pasta with clams, truffles and wild sorrel (erba brusca).",
+                                                         "A real institution in the city, this old guard restaurant in Zona Risorgimento marries the simplicity of rustic Tuscan cuisine with the drama of classic Milanese interior design. The extensive menu skews towards seafood, serving dishes like paccheri with swordfish and eggplant, a large selection of raw carpaccio and tartare, plus market-fresh fish, which arrives at the table whole to be served with theatrical flair."};
+            string[] restaurantLink = new string[] { "https://www.pasticceriacova.com/", "https://www.savinimilano.it/menu-fine-dining/?utm_source=Google-Maps&utm_medium=Link-Menu&utm_campaign=Social-Media", "https://boeucc.it/", "https://locations.armani.com/restaurants-cafes-and-clubs/italy/nobu-milano", "https://erbabrusca.it/", "https://giacomomilano.com/it/i-luoghi/ristoranti/da-giacomo-milano" };
+        }
+        @for (int k = 0; k <= 5; k++)
+        {
+            <div class="restaurantsa" style="background-color: rgb(249, 230, 230); border: 1px solid rgb(236, 162, 65);  border-radius: 3%; ">
+                <h class="headinga" style=" font-size: 150%; color: rgb(236, 162, 65);font-family: Verdana, Geneva, Tahoma, sans-serif;">@restaurantHead[k]</h>
+                <a href=@restaurantLink[k] target="_blank"><img src="@restaurantImage[k]" style="width: 90%; border-radius: 2%; margin: 5% 5%;" alt="@restaurantHead[k]"></a>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> @restaurantParagraph[k]</p>
+            </div>
+        }
+
+    </div>
+    <!-- Restaurants div ends -->
+    <!-- Hotel div starts -->
+    <div class="hotelheada" style="margin: 50px;">
+        <h style="color: red;  font-size: 35px; "><b>HOTELS YOU CAN CHOOSE FOR YOUR MILAN TRIP</b></h>
+    </div>
+    <div class="food" style="display: flex; flex-wrap: wrap;">
+        @{
+            string[] hotelHead = new string[] { "Mandarin  Oriental $$$", "Bulgari Hotel $$$", "Room Mate Giulia Hotel $$", "Senato Hotel $$", "Combo $", "Ostello Bello $" };
+            string[] hotelImage = new string[] { "/Content/images/mandarin.jpg", "/Content/images/bulgari.jpg", "/Content/images/room-mate.jpg", "/Content/images/senato.jpg", "/Content/images/combo.jpg", "/Content/images/ostello.jpg" };
+            string[] hotelLink = new string[] { "https://www.mandarinoriental.com/en/milan/la-scala?src=loc.local_listing.momln.ggl", "https://www.bulgarihotels.com/en_US/milan?scid=f2ae0541-1279-4f24-b197-a979c79310b0", "https://room-matehotels.com/en/giulia/", "https://www.senatohotelmilano.it/", "https://thisiscombo.com/location/milano/", "https://ostellobello.com/en/hostel/milan-duomo/?utm_source=google&utm_medium=local&utm_campaign=MyBusiness_OBM" };
+            string[] hotelParagraph = new string[] { " Set in an early 20th-century residence a few steps from the Fashion District, the Mandarin is all soft, mellow tones and elegant boiserie crafted by Italian artisans. Locals and guests flock to the Mandarin Bar & Bistrot to sip on inventive cocktails in a bold geometric setting. Wellness seekers make a beeline for the soothing spa, complete with a swimming pool, saunas and steam rooms, and holistic treatments that combine the best of Eastern and Western therapies. ",
+                                                         "In summer, the jet-set gather in Bulgari's gorgeous gardens shaded by horse chestnuts and plane trees to sip cocktails at one of Milan's best aperitivi.There is, after all, no better place to see or be seen. Inside, all is sleek black Zimbabwean marble, bronze and Burmese teak wood. In the rooms, light floods in through soaring windows while handsome bathrooms have granite bathtubs and flashes of travertine stone as well as, of course, divine Bulgari toiletries.",
+                                                         "It’s all quirky design features with bright pops of colour at this hotel smack in the centre of Milan, steps away from the imposing Duomo. Spanish designer Patricia Urquiola took inspiration from 1960s Milanese residences, giving life to retro interiors in bold hues that burst with personality. Walls are brightened up with works by local artists, photographers and illustrators.",
+                                                         "This sophisticated bolthole is a world away from the frenetic thoroughfare of Via Senato; cross the road and you’ll be swallowed up into the cobbled streets of the Fashion District. At the entrance of the hotel, a shallow courtyard pool exudes an aura of calm, while handcrafted lamps in the shade of ginkgo leaves hover above the reception area. Black, white and brass feature heavily, with all-white rooms decked out in contemporary Milanese furnishings.",
+                                                         "Combo Milano Hostel allows you to be a 10-minute drive from Milan Cathedral and Piazza del Duomo. Additionally, Teatro alla Scala and the Meazzo (San Siro) Stadium are a short drive away. The accommodation is close to public transportation, with Ripa di Porta Ticinese Via Lombardini Tram Stop a 3-minute walk and Via Valenza Alzaia Nav. Grande Tram Stop a 3-minute walk.",
+                                                         "When you choose Ostello Bello for accommodation, you will be within a 15-minute walking distance from Piazza del Duomo and Milan  Cathedral. Take advantage of the coffee shop/cafe to grab a snack or unwind at the bar/lounge with a drink at the end of the day. A light buffet/deli and a terrace are other highlighted features."};
+        }
+        @for (int j = 0; j <= 5; j++)
+        {
+            <div class="hotelsa" style="border: 1px solid rgb(236, 162, 65); border-radius: 3%; background-color: rgb(249, 230, 230); ">
+                <h class="headinga" style="color: rgb(236, 162, 65); font-family: Verdana, Geneva, Tahoma, sans-serif;">@hotelHead[j]</h>
+                <a href=@hotelLink[j] target="_blank"><img src="@hotelImage[j] " style="width: 90%; margin: 5% 5%;" alt="@hotelHead[j]  "></a>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">@hotelParagraph[j] </p>
+            </div>
+        }
+    </div>
+
+    <!-- Hotel div ends-->
+</div>
+<div style="width: 100%; height: 170px;">
+    <p style="text-align: center; padding-top: 50px; font-size: 35px; color: crimson;">
+        You can see our tours for a perfect travel experience... <a style="text-decoration: none;" href="@Url.Action("Tour_List","Home")">
+            Click
+            Here...
+        </a>
+    </p>
+</div>
+
+<!-- Last part starts -->
+<!-- Last part ends -->

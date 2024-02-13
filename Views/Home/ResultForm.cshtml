@@ -1,0 +1,24 @@
+﻿@model TourismTravelAdministration.Models.Contact
+@{
+    ViewBag.Title = "ResultForm";
+    Layout = null;
+}
+
+<h2>ResultForm</h2>
+
+<div>
+
+    <h1>Thanks!</h1>
+    <h2>You contacted with us :) </h2>
+
+    <b>
+        Name : @ViewBag.name <br />
+        Phone No : @ViewBag.phoneNumber <br />
+        Email : @ViewBag.email <br />
+        Message : @ViewBag.message <br />
+
+        @Html.ActionLink("Back to the Contact Page", "Contact")
+    </b>
+</div>
+
+

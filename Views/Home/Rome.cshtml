@@ -1,0 +1,150 @@
+﻿@{
+    ViewBag.Title = "Rome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!--rome div starts -->
+<div style=" position: relative;  ">
+    <img style="width: 100%; height: 600px;" src="~/Content/images/rome_photo.jpg" alt="rome">
+    <p class="rome"
+       style="position: absolute; color: rgb(110, 28, 28); font-size: 100px; margin-top: -400px; margin-left: 40%; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        ROME
+    </p>
+</div>
+<!--rome div ends -->
+<!-- about rome div starts -->
+<div style=" background-color: rgb(252, 247, 238); ">
+    <div class="about" style="display: flex; margin: 0px 5px; background-color: rgb(252, 247, 238); ">
+        <div class="about-photo1a">
+            <img src="~/Content/images/people1.jpg" alt="Photos" style="width:100%; border-radius: 3%;">
+        </div>
+
+        <div style="width: 35%; height: auto; margin: 5% 5%; padding-top: 4%; padding-left: 1%; padding-right: 1%; border: 1px solid rgb(236, 162, 65); border-radius: 10px; font-size: 22px; ">
+            <h class="majesty" style="color: red;">About Rome</h>
+            <p style="color: black; font-size: 80%; padding-top: 2%; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                The city of Rome, with a population of approximately 4.3
+                million, is one of the
+                most enchanting cities in
+                the world and serves as the capital of Italy. This Latin city, which transformed from a small village
+                into a
+                great civilization, is also the seat of the Papacy. Rome not only boasts a rich historical past and
+                ancient
+                ruins but also carries the distinction of being a prominent global city with its international politics
+                and
+                cultural diversity.
+            </p>
+            <p style="text-align: center; padding: 2px 5px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 80%; color:black;">
+                Rome is the most populous and extensive city in Italy. The
+                presence of the Papacy
+                in Vatican City bestows upon Rome the title of the "capital of two states." Situated near the Tyrrhenian
+                Sea, the city is located along the Tiber River in the Lazio region.The city carefully preserves its
+                works
+                from the medieval and Renaissance periods, resembling a museum with the remnants of ancient
+                civilizations
+                and a strong emphasis on artistic movements. This city's beauty and history make it perhaps the most
+                praised
+                city with numerous accolades written about it.
+            </p>
+        </div>
+        <div class="about-photo2a">
+            <img src="~/Content/images/people2.jpg" alt=" Photos" style="width:100%; border-radius: 3%;">
+        </div>
+    </div>
+    <!-- about rome div ends -->
+    <!-- Places div starts -->
+    <div class="placeheada" style="margin-top: 0px; margin-bottom: 0px; background-color: rgb(252, 247, 238);">
+        <h style=" color: red; font-size: 35px;"><b>PLACES YOU SHOULD SEE IN ROME</b></h>
+    </div>
+
+    <div class="places" style="display: flex; flex-wrap: wrap;">
+        @{
+            string[] placeHead = new string[] { "Colleseum", " Piazza Di Spagna", "Pantheon", "Trevi Fountain", "Vatican", "Piazza Venezia" };
+            string[] placeImage = new string[] { "/Content/images/colleseum.jpg", "/Content/images/piazza-di-spagna.jpg", "/Content/images/pantheon.jpg", "/Content/images/trevi-fountain.jpg", "/Content/images/vatican.jpg", "/Content/images/piazza-venezia.jpg" };
+            string[] placeParagraph = new string[] {"It located in the heart of Rome, known as the world's oldest capital. The Colosseum is a historic amphitheater that has witnessed gladiator battles, wild animal fights, and entertainment that lasted throughout the night. Abandoned to its own fate for centuries, the Colosseum is now protected by the UNESCO World Heritage List and attracts approximately 5 million tourists each year." ,
+                                                    "Located very close to the Trevi Fountain, this structure has become a gathering and meeting point, especially for the local people. In the area, there are streets for shopping, including the most popular shopping street, Via Condotti, and areas where you can spend enjoyable time. The Spanish Steps, one of the world's most famous staircases, are perhaps one of the most romantic places in Rome.",
+                                                    "The Pantheon Temple, which has been plundered many times, destroyed by fire, and once rebuilt, has managed to preserve its existence for  centuries and stands as one of the most important structures of Western civilization. Especially significant for Italy, the temple captivates with its grandeur and mystical architecture. Surpassing even the size of the Selimiye Mosque, this structure also serves as a place of worship for Christians.",
+                                                    " Known as the Fountain of Love worldwide and considered a masterpiece of Italian art, this fountain was built in the Baroque style between 1732 and 1760 by Niccola Salvi. The figure of the fountain, placed within a niche, represents the sea god Neptune. This impressive monument is located in the Trevi district of Rome, following Via Del Corsa. Illuminated at night, the Fountain of Love forms the front facade of the ancient Palazzo Poli, featuring mythological creatures.",
+                                                    " It is the world's smallest state, located in the city of Rome, Italy. Governed by an absolute monarchy system, it deals with the  administration of the Catholic sect in Christianity. Built over the tomb of Saint Peter, the country has a population of only 800 people. There are many special places to visit within the country, including St. Peter's Basilica, St. Peter's Square, the Vatican Museums, and the Vatican Gardens.",
+                                                    "The square, located in the center of Rome, is situated at the foot of the Capitoline Hill. This area, which is a must-visit for almost  everyone visiting Rome, also intersects with the Fori Imperiali and Via del Corso. It takes its name from Cardinal Venezia. Additionally, in the square, there is a monument statue belonging to the Vittoriano II, built in 1911."};
+        }
+        @for (int i = 0; i <= 5; i++)
+        {
+
+            <div class="towns" style="background-color: rgb(252, 247, 238); border: 1px solid rgb(236, 162, 65);border-radius: 3%;">
+                <h class="headinga" style=" font-family: Verdana, Geneva, Tahoma, sans-serif;color:rgb(236, 162, 65);">@placeHead[i]</h>
+                <img src="@placeImage[i]" style="width: 90%; margin: 5% 5%; border-radius: 2%;" alt="@placeImage[i]">
+                <p>@placeParagraph[i]</p>
+            </div>
+        }
+
+    </div>
+
+    <!-- Places div ends -->
+    <!-- Restaurants div starts -->
+    <div style="text-align: center; margin-bottom: 25px;">
+        <p style="font-size: 200%; color: red;  font-weight: bold;">
+            FOOD PLACES YOU SHOULD DEFINITELY
+            VISIT IN ROME
+        </p>
+    </div>
+    <div class="places" style="display: flex; flex-wrap: wrap;">
+        @{
+            string[] restaurantHead = new string[] { "Alfredo Alla Scrofa", "Pompi", "Giolitti" };
+            string[] restaurantImage = new string[] { "/Content/images/alfredo-alla-scrofa.jpg", "/Content/images/pompi.jpg", "/Content/images/giolitti.jpg" };
+            string[] restaurantParagraph = new string[] {"This restaurant, with approximately a century-old Italian flavor, continues the century-old tradition by still serving the taste of Fettuccine made with the legendary chef Alfredo's own recipe without any alterations. You should consider adding  Fettuccine to your choices for a meal.",
+                                                         "One of Italy's most famous desserts is Tiramisu. To taste this flavor, which meanspick me up in Italian, you should visit Pompi, the oldest pastry shop in Rome. This place, known for its expertise in Tiramisu, will leave an exquisite taste in your mouth with the Tiramisu flavored with Mascarpone cheese.",
+                                                         "For those who say, You can't leave Rome without eating ice cream, you can visit Giotti, the most famous ice cream parlor in Rome. Enjoying the atmosphere at the outdoor tables, you can witness delightful flavors."};
+            string[] restaurantLink = new string[] { "https://alfredoallascrofa.com/en/menu/", "https://barpompi.it/", "https://www.giolitti.it/" };
+        }
+        @for (int k = 0; k <= 2; k++)
+        {
+            <div class="restaurantsa" style="background-color: rgb(252, 247, 238); border: 1px solid rgb(236, 162, 65); border-radius: 3%; ">
+                <h class="headinga" style=" font-size: 150%; color: rgb(236, 162, 65);font-family: Verdana, Geneva, Tahoma, sans-serif;">@restaurantHead[k]</h>
+                <a href=@restaurantLink[k] target="_blank"><img src="@restaurantImage[k]" style="width: 90%; border-radius: 2%; margin: 5% 5%;" alt="@restaurantHead[k]"></a>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> @restaurantParagraph[k]</p>
+            </div>
+        }
+
+    </div>
+
+    <!-- Restaurants div ends -->
+    <!-- Hotel div starts -->
+    <div class="hotelheada" style="margin: 50px;">
+        <h style="color: red;  font-size: 35px; "><b>HOTELS YOU CAN CHOOSE FOR YOUR ROME TRIP</b></h>
+    </div>
+    <div class="food" style="display: flex; flex-wrap: wrap;">
+        @{
+            string[] hotelHead = new string[] { "NH Collection Rome Fori Imperiali $$$", "Six Senses Rome  $$$", "Nerva Boutique Hotel $$", "Antico Albergo del Sole al Pantheon $$", "At Forty-one $", " Hotel Damaso $" };
+            string[] hotelImage = new string[] { "/Content/images/nh-collection.jpg", "/Content/images/six-senses.jpg", "/Content/images/nerva-hotel.jpg", "/Content/images/antico-albergo.jpg", "/Content/images/at-forty-one.jpg", "/Content/images/hotel-damaso.jpg" };
+            string[] hotelLink = new string[] { "https://www.nh-hotels.com/en/hotel/nh-collection-roma-fori-imperiali?utm_campaign=local-gmb&utm_medium=organic_search&utm_source=google_gmb", "https://www.sixsenses.com/en/hotels/rome", "https://www.hotelnerva.com/en/", "https://www.hotelsolealpantheon.com/?utm_source=gbp&utm_medium=organic", "https://atfortyonerome.it/", "https://www.hoteldamaso.it/" };
+            string[] hotelParagraph = new string[] { " A luxury hotel option within walking distance to attractions such as the Colosseum, Pantheon, and Trevi Fountain in the Trevi district." ,
+                                                     "For those coming for a special day in Rome, Six Senses, one of the exclusive hotels in the entire city, is a luxurious option in the city center. The design of the hotel and rooms is truly delightful.",
+                                                     "A boutique hotel within a 5-minute walking distance to the Colosseum. Most of the hotel rooms are spacious, equipped with amenities such as TV, bathroom essentials, minibar, and WiFi in every room. Pets are also welcome.",
+                                                     " An hotel option with a view of the  Pantheon. The hotel's history dates back to the 14th century and has hosted famous guests such as Sartre and Simone de Beauvoir.",
+                                                     " A modernly furnished option offering  minimal rooms in the Termini area. If you're willing to walk a bit and are looking for budget-friendly  accommodations, this is a clean hotel.",
+                                                     " A hotel in the Trevi district, housed  in a 19th-century building. It is one of the budget-friendly options in the area. It features a terrace  with panoramic views. Some rooms have balconies, and almost all of them offer beautiful city views."};
+        }
+        @for (int j = 0; j <= 5; j++)
+        {
+            <div class="hotelsa" style="border: 1px solid rgb(236, 162, 65); border-radius: 3%; background-color: rgb(252, 247, 238); ">
+                <h class="headinga" style="color: rgb(236, 162, 65); font-family: Verdana, Geneva, Tahoma, sans-serif;">@hotelHead[j]</h>
+                <a href=@hotelLink[j] target="_blank"><img src="@hotelImage[j] " style="width: 90%; margin: 5% 5%;" alt="@hotelHead[j]  "></a>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">@hotelParagraph[j] </p>
+            </div>
+        }
+    </div>
+
+</div>
+<!-- Hotel div ends-->
+<div style="width: 100%; height: 170px;">
+    <p style="text-align: center; padding-top: 50px; font-size: 35px; color: crimson;">
+        You can see our tours for a perfect travel experience... <a style="text-decoration: none;" href="@Url.Action("Tour_List", "Home")">
+            Click
+            Here...
+        </a>
+    </p>
+</div>
+
+<!-- Last part starts -->
+<!-- Last part ends -->

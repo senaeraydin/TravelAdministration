@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Tour_Info";
+}
+
+@helper GetImagePath(string fileName)
+{
+    var imagePath = $"~/Content/Images/{fileName}";
+    <img src="@Url.Content(imagePath)" alt="Tour Image" width="100%" height="100%" />
+}
+<p style="font-weight:bolder; position:relative; ">@GetImagePath(Model.TImage)</p>
+
+<p style=" text-align:center; margin-top: -18%; position:relative; font-size: 300%; font-weight:bolder; font-family:'MS UI Gothic'; color: rgb(94,1,80); background: rgb(234,230,233)">@Model.TourName</p>
+
+<p style="text-align: center; margin-top: 18%; color: rgb(94,1,80); font-size: 200%; font-weight: bolder; font-family:'Franklin Gothic', Times, serif ">DESCRIPTION</p>
+<div style="width: 70%; padding-top: 5%;">
+    <p style="margin-top: -2%; text-align:center; margin-left: 40%; font-size:125%">@Model.Description</p>
+</div>
+
+<p>
+    @if (Model.TAvailable)
+    {
+    <p style="color: green; font-weight: bolder; font-size: 180%; margin-left:35%; margin-top:5%; margin-bottom:4% ; font-family:Rockwell">You can make an reservation</p>
+    <a style=" border: 1px solid orange; border-radius:10px; background:orange; border-width: 25px; margin-left: 41%; text-decoration:none; font-size: 130%" href="@Url.Action("PaymentForm", "Home")">Make a Reservation</a>
+}
+else
+{
+    <p style="margin-top: 4%; font-size: 200%; text-align:center; color: rgb(245,171,236); font-family:'Bauhaus 93'">Our reservations are full. Please check out <a style="font-family: 'Bauhaus 93'" href="@Url.Action("Tour_List", "Home")">other tours</a></p>
+}
+    </p>
+
+
+    <div style="background-color: rgb(171,211,245); ">
+        <div style="margin-top:7%; display: flex; padding-top:2%">
+            <p style="text-align: center; font-size: 130%; margin-left: 12%"><i style="color:darkblue;" class="fa-solid fa-shield-halved"></i>Join the millions who have trusted Veni Vidi Vici Tour</p>
+            <p style="text-align:center; font-size: 130%; margin-left: 10%"><i style="color:darkblue;" class="fa-regular fa-user"></i>We Have Taken All Precautions for You</p>
+        </div>
+
+        <div style="margin-top:3%; display: flex; padding-bottom: 2%">
+            <p style="text-align: center; font-size: 130%; margin-left:12%"><i style="color:darkblue;" class="fa-regular fa-credit-card"></i>Opportunity to purchase your holiday in 12 installments</p>
+            <p style="text-align:center; font-size: 130%; margin-left: 8%">
+                <i style="color:darkblue;" class="fa-solid fa-globe"></i> Shopping
+                Highly secure online shopping with encryption
+            </p>
+        </div>
+    </div>
+    <br />
+    <br />
+
+
+
+
+
+

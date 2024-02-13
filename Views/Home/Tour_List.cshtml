@@ -1,0 +1,46 @@
+﻿@model List<TourismTravelAdministration.Models.Tour>
+@{
+    ViewBag.Title = "Tour_List";
+}
+
+<p style="text-align: center; padding-top: 4%; font-family: 'French Script MT'; color: rgb(43,220,186); font-size: 300%; font-weight: bolder; ">Welcome to discover the unique places of Italy with Veni Vidi Vici</p>
+
+
+
+@foreach (var tour in Model)
+{
+    <div style="border: 3px solid rgb(33,78,67);  margin-top: 4%; width : 80%; margin-left: 9%; margin-bottom: 4%; ">
+        <p style="padding-top: 2%; padding-left: 6%; font-weight: bolder; font-size: 150%; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(27,65,57)">@tour.TourName</p>
+
+        @helper GetImagePath(string fileName)
+        {
+            var imagePath = $"~/Content/Images/{fileName}";
+            <img src="@Url.Content(imagePath)" alt="Tour Image" width="330" height="220" />
+        }
+        <p style="padding-top: 2%; padding-left: 3%; display:flex; ">@GetImagePath(tour.TImage)</p>
+
+        <p style="padding-left: 40%; margin-top: -15%; margin-bottom: 1%; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(27,65,57); font-weight: bolder; ">Start & End Date</p>
+        <p style="padding-left: 37%; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(27,65,57); font-weight: bolder; margin-bottom: 1%; ">@tour.TourDate</p>
+
+        <p style="padding-left: 40%; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(27,65,57); font-weight: bolder; ">( @tour.TotalDay )</p>
+
+        <p style="padding-left: 74%; font-size: 200%; margin-top: -9%; margin-bottom: 1px; color: rgb(74,201,177);"><i class="fa-solid fa-euro-sign"></i> @tour.TourPrice </p>
+        <p style="padding-left: 75%; margin-bottom: 4%; color: rgb(74,201,177); ">Price per person</p>
+        <a href="@Url.Action("Tour_Info","Home", new { id = tour.ID })" style="text-decoration: none; margin-left: 70%; border: 2px solid rgb(27,65,57); background: rgb(74,201,177); font-size: 200%; border-radius: 8%; border-width: 250%; color: rgb(27,65,57); border-width: 2px 4px 5px 8px; ">   View Tour Details   </a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+    </div>
+
+
+
+}
+
+
+

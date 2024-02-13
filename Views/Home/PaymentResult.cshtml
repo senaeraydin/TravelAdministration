@@ -1,0 +1,25 @@
+﻿@model TourismTravelAdministration.Models.Payment
+@{
+    ViewBag.Title = "PaymentResult";
+    Layout = null;
+}
+
+<head>
+    <title>PaymentResult</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: rgba(195,234,235,255);
+        }
+    </style>
+</head>
+
+<body>
+    <p style="text-align: center; font-size: 230%; color: rgba(71,50,33,255); margin-top:10% ">Dear @ViewBag.cardOwnerName , you have successfully completed your reservation.</p>
+    <p style="text-align: center; font-size: 230%; color: rgba(71,50,33,255); ">We wish you a good holiday where you will have unique experiences with Veni Vidi Vici.</p>
+
+    <p style="text-align: center; font-size: 230%; color: rgba(71,50,33,255); ">If you are interested in our other tours, please <a href="@Url.Action("Tour_List","Home")">click</a> </p>
+    <p><i style="font-size: 600%; margin-top: 5%; margin-left: 45%; color: rgba(2,61,117,255) " class="fa-solid fa-plane-departure"></i></p>
+</body>

@@ -1,0 +1,142 @@
+﻿@model TourismTravelAdministration.Models.Contact
+@{
+    Layout = "~/Views/Shared/_Header.cshtml";
+}
+<div >
+    <div class="form-page">
+
+
+        <form id="contactUs">
+            <h1 class="titlee" style="margin-left:45%; margin-bottom:4%; ">Contact Us</h1>
+
+            <div style="border: 4px solid rgb(45, 0, 128); height: 450px; width: 100%; margin-left: 25%; border-style:dotted;">
+                @using (Html.BeginForm())
+                {
+                    @Html.ValidationSummary(){
+                        <div class=" = input-group" style="padding-top: 35px">
+                            <p id="name" ><i class="fa-solid fa-user"></i>Your Name : @Html.TextBoxFor(x => x.Name)</p>
+                        </div>
+                        <div class="= input-group">
+                            <p id="number" ><i class="fa-solid fa-phone"></i>Phone No. : @Html.TextBoxFor(x => x.PhoneNumber) </p>
+                        </div>
+                        <div class=" = input-group">
+                            <p id="email" ><i class="fa-solid fa-envelope"></i>Email Add.:@Html.TextBoxFor(x => x.Email) </p>
+                        </div>
+                        <div class=" = input-group">
+                            <p id="message"><i class="fa-solid fa-comments"></i>Message : @Html.TextBoxFor(x => x.Message) </p>
+                        </div>
+                    }
+
+                    <button type="submit">Submit</button>
+                    <link rel="stylesheet" href="@Href("~/Content/Style.css")" type="text/css" />
+
+                }
+            </div>
+        </form>
+    </div>
+
+    <aside>
+        <div class="map_info">
+
+            <div class="book-tour">
+                <h1 class="info-text" style="font-size: 25px;">To book a tour</h1>
+                <p class="info-text">Our team of expert Tour Consultants will help you find and plan your dream</p>
+                <br>
+                <ul>
+                    <li class="info-text"><strong> Monday-Friday</strong> 9am-7:30pm</li>
+                    <li class="info-text"><strong> Saturday</strong> 9am-5:30pm</li>
+                    <li class="info-text"><strong> Sunday</strong> 10am-6pm</li>
+                </ul>
+
+            </div>
+            <div class="book-tour">
+                <h1 class="info-text" style="font-size: 25px;">For help with your reservation</h1>
+                <p class="info-text">
+                    If you're booked on your tour and have a question, our Traveller Support Team
+                    is
+                    here for
+                    you.
+                </p>
+                <br>
+                <ul>
+                    <li class="info-text"><strong> Weekdays </strong> 9am-7:00pm</li>
+                    <li class="info-text"><strong> Saturday</strong> 9am-5:00pm</li>
+                    <li class="info-text"><strong> Sunday</strong> Closed</li>
+                </ul>
+
+            </div>
+
+            <div id="map">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1ZCUIOIfogWDQ9U2Rqk0qrNkgnaPy6ro&ehbc=2E312F&noprof=1"
+                        width="38%" height="450"></iframe>
+
+
+                <div class="info">
+                    <p class="text" style="font-size: 17px;"> For those who love to travel, we are here!</p>
+                    <p class="text" style="font-size: 17px;">
+                        You can get in touch with us right here.
+                        What queries or comments do you have regarding our travels?
+                        Perhaps you have a request or a suggestion? Feel free to get in touch with us.
+                        Our staff will be pleased to help and enhance your experience.
+                        We aim to get in touch with you no later than 24 hours.
+                    </p>
+                    <p class="text" style="color: black;">
+                        <a href="https://maps.app.goo.gl/ZfJnqyuT3m1KsR9w8"
+                           target="_blank">
+                            <i class="fa-solid fa-location-dot"></i> Via di Monte Fiore
+                            15, Roma, Roma,
+                            Italy 00153
+                        </a>
+                    </p>
+                    <p class="text">
+                        <a href="#" target="_blank">
+                            <i class="fa-solid fa-square-envelope"></i>
+                            VeniVidiVici@gmail.com
+                        </a>
+                    </p>
+                    <p class="text">
+                        <a href="#" target="_blank">
+                            <i class="fa-solid fa-square-envelope"></i>
+                            info@VeniVidiVici.hr
+                        </a>
+                    </p>
+                    <p class="text">
+                        <a href="#" target="_blank">
+                            <i class="fa-solid fa-phone"></i> +385 91 5945
+                            108
+                        </a>
+                    </p>
+                    <footer>
+
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/?locale=tr_TR" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>&nbsp&nbsp
+                            <a href="https://twitter.com/login?lang=tr" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>&nbsp&nbsp
+                            <a href="https://www.instagram.com/veni.vidi.vici_tour/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>&nbsp&nbsp
+                            <a href="https://www.linkedin.com/login/tr" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>&nbsp&nbsp
+                            <a href="https://www.youtube.com/?hl=tr&gl=TR" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>&nbsp&nbsp
+                        </div><br>
+                        <br />
+                        <p>© 2023 Veni Vidi Vici. All rights reserved.</p>
+                        <br />
+
+                    </footer>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </aside>
+
+</div>

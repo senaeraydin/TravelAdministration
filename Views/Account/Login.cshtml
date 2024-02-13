@@ -1,0 +1,91 @@
+﻿@using TourismTravelAdministration.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-family: 'Agbalumo';
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fafafa;
+            padding: 30px;
+            padding-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px #00000050;
+            height: 450px;
+        }
+
+            .login-container h2 {
+                text-align: center;
+                color: #333333;
+                margin-bottom: 20px;
+            }
+
+        .form-control {
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .btn-custom {
+            background-color: rgb(65,76,181);
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            color: white;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+            .btn-custom:hover {
+                background-color: #8594e4;
+            }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>@ViewBag.Title</h2>
+        <hr />
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group" ;style=" padding-bottom: 15px;">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group" ; style=" padding-bottom: 15px;">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group" ; style=" padding-bottom: 15px;">
+                <input type="submit" value="LOGIN" class="btn btn-custom" />
+            </div>
+        }
+        <div class="login-footer">
+            @Html.ActionLink("Forgot Username / Password", "ForgotPassword")
+            <br />
+            @Html.ActionLink("Create your Account →", "Register")
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+</body>
+</html>

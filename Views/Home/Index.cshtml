@@ -1,0 +1,191 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- slayt başlangıç -->
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <img src="~/Content/images/rome.jpeg" style="width:100%">
+        <div class="mmtext">I came, I saw, I conquered.</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="~/Content/images/milan.jpeg" style="width:100%">
+        <div class="mmtext">Journey to Adventure: Explore the World, Build a Life Full of Memories!</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="~/Content/images/image1.jpg" style="width:100%">
+        <div class="mmtext">Are you ready for adventure with us?</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+</script>
+<!-- slayt bitiş -->
+<!-- information context start -->
+<div style="display: flex;" class="content1">
+    <h1 class="header1">The Magical World of Travel: Contributions to Our Lives and Delightful Memories</h1>
+</div>
+
+<div class="cont" style="width: 100%; height: 470px; display: flex; margin-top: 40px; ">
+    <div class="image-div" style="position: relative;top: 30px; padding-left: 170px; ">
+        <img class="image_" style="width: 115%;height: 400px; border-radius: 8px 8px 8px 8px; display: flex; "
+             src="~/Content/images/content1.jpeg">
+        <!-- style="width: 800px;height: 450px; border-radius: 8px 8px 8px 8px; display: flex; -->
+    </div>
+    <div class="content2">
+        <h2 class="header" style="font-family: 'Times New Roman', Times, serif; color: darkred; ">
+            Novel Cultures and
+            Fresh Views
+        </h2>
+        <br>
+        <p style="font-family: 'Times New Roman', Times, serif; ">
+            Meeting people from other cultures and learning
+            about
+            their rich history are opportunities
+            provided by travel. Traveling to other countries broadens our perspective and increases our capacity for
+            tolerance and comprehension.
+        </p>
+    </div>
+</div>
+
+<div style="width: 100%; height: 470px;">
+    <div class="image-div2" style="position: relative; top: 30px; padding-left: 170px; ">
+        <img class="image2" style="width: 50%;height: 400px; margin-top:70px; border-radius: 8px 8px 8px 8px;"
+             src="~/Content/images/content2.jpeg">
+    </div>
+    <div class="content3">
+        <h2 class="header" style="font-family: 'Times New Roman', Times, serif; color: darkred;">
+            Stress-reduction
+            Vacation
+        </h2>
+        <br>
+        <p style="font-family: 'Times New Roman', Times, serif;">
+            One of the best ways to decompress is to travel and
+            take in the history, the natural world, or
+            just a peaceful beach. It's the perfect chance to relax in a different setting, replenish your vitality,
+            and
+            reenergize yourself.
+        </p>
+    </div>
+</div>
+
+
+
+<div style="width: 100%; height: 620px;">
+    <div class="image-div3" style="position: relative; top: 150px; padding-left: 170px; ">
+        <img class="image3" style="width: 50%;height: 400px;  border-radius: 8px 8px 8px 8px;"
+             src="~/Content/images/content3.jpeg">
+    </div>
+    <div class="content4">
+        <h2 class="header" style="font-family: 'Times New Roman', Times, serif; color: darkred;">
+            Community and
+            Connection
+        </h2>
+        <br>
+        <p style="font-family: 'Times New Roman', Times, serif;">
+            Traveling provides the chance to meet others who
+            share your interests and hobbies in addition to
+            exploring new locations. Our organization arranges group tours and activities that facilitate the
+            development of meaningful relationships and enduring friendships in addition to location exploration.
+            Travel
+            enthusiasts form a special kinship through these group encounters, and they also produce sharing
+            memories of
+            shared trips.
+        </p>
+    </div>
+</div>
+
+<!-- information context end -->
+<!-- Cities start -->
+<div class="content5" style="width: 100%; height: 100px;  margin-top: 20px; padding: 20px;">
+    <p class="content5-p">The Top Cities You Must See in Italy</p>
+</div>
+
+<div class="cities-part1" style="margin-left: 7%">
+    <div class="first">
+        <a target="_blank" href="@Url.Action("Venice","Home")">
+            <img style="display: flex;" class="cities-photo" src="~/Content/images/venice.jpg">
+        </a>
+
+        <p style="text-align: center; font-size: 20px; color: darkred;"><b>Venice</b></p>
+    </div>
+
+    <div class="second">
+        <a target="_blank" href="@Url.Action("Rome","Home")">
+            <img style="display: flex;" class="cities-photo" src="~/Content/images/rome2.jpg">
+        </a>
+        <p style="padding-left: 170px; font-size: 20px; color: darkred; "><b>Rome</b></p>
+    </div>
+
+    <div class="third">
+        <a target="_blank" href="@Url.Action("Milan","Home")">
+            <img style="display: flex;" class="cities-photo" src="~/Content/images/milan2.jpg">
+        </a>
+        <p style="padding-left: 170px; font-size: 20px; color: darkred; "><b>Milan</b></p>
+    </div>
+
+</div>
+
+
+<div class="cities-part2" style="margin-left: 7%">
+    <div class="fourth">
+        <a target="_blank" href="@Url.Action("Florence","Home")">
+            <img class="cities-photo" src="~/Content/images/florence.jpg">
+        </a>
+        <p style="text-align: center; font-size: 20px; color: darkred; "><b>Florence</b></p>
+    </div>
+    <div class="fifth">
+        <a target="_blank" href="@Url.Action("Verona","Home")">
+            <img class="cities-photo" src="~/Content/images/verona.jpg">
+        </a>
+        <p style="padding-left: 170px; font-size: 20px; color: darkred; "><b>Verona</b></p>
+    </div>
+    <div class="sixth">
+        <a target="_blank" href="@Url.Action("Amalfi","Home")">
+            <img class="cities-photo" src="~/Content/images/AmalfiCoast.jpg">
+        </a>
+        <p style="padding-left: 140px; font-size: 20px; color: darkred; "><b>Amalfi Coast</b></p>
+    </div>
+</div>
+<!-- cities ends -->

@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewBag.Title = "Venice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="amalfi">
+    <div class="amalfi-image" style="display: flex;">
+        <img style="width: 100%; height:600px;" src="~/Content/images/italy-venice2.jpg" alt="Header Photo">
+        <p class="texta" style="transform: translate(-50%, -30%); color: rgb(110, 28, 28); font-family: Verdana, Geneva, Tahoma, sans-serif; ">VENICE</p>
+    </div>
+    <div class="about" style="display: flex; margin:30px 5px;">
+        <div class="about-photo1a">
+            <img src="~/Content/images/VENICE-ITALY-Gray-Line-Worldwide.jpg" alt=" Photos" style="width: 100%; border-radius: 3%;">
+        </div>
+
+        <div style="width: 35%; height: auto; margin: 5% 5%; padding-top: 3%; padding-left: 1%; padding-right: 1%; border: 2px solid rgb(28, 28, 56); color: rgb(110, 28, 28); border-radius: 10px; font-size: 22px; ">
+            <h class="majesty" style="color: rgb(28, 28, 56);">Venice</h>
+            <p style="font-size: 20px; color: rgb(28, 28, 56);">
+                The enthrallingly beautiful city of Venice is situated in northeastern Italy along the Adriatic Sea's
+                beaches. This city, well-known for its gondolas, canals, and winding lanes, is charming and historic.
+                Over 400 bridges connect Venice, which is spread across about 118 tiny islands. The majestic Saint
+                Mark's Basilica and the tall Campanile are located in the city's center, on Piazza San Marco. The
+                esteemed Venice Biennale and the Venice Film Festival are held in Venice, which is known for its
+                remnants of the Renaissance. Its distinctive architecture and refined waterfront lifestyle enthrall
+                tourists in addition to the city's abundance of artistic and historical resources.
+            </p>
+        </div>
+        <div class="about-photo2a">
+            <img src="~/Content/images/venedik-gondol3.jpg" alt="Photos" style="width:100%; border-radius: 3%;">
+        </div>
+    </div>
+
+
+    <!-- Places div starts -->
+    <div style="text-align:center; margin-bottom: 25px;">
+        <p style="font-size: 180%; color: rgb(28, 28, 56); font-size:35px; font-weight:bold;">
+            PLACES YOU SHOULD SEE
+            IN VENICE
+        </p>
+    </div>
+    <div class="places" style="display: flex; flex-wrap: wrap;">
+        @{
+            string[] placeHead = new string[] { " Piazza San Marco", "Rialto Bridge", "Grand Canal", };
+            string[] placeImage = new string[] { "/Content/images/san-marco-meydani_venice4.jpg", "/Content/images/Rialto-Bridge-Venice.jpg", "/Content/images/grand-canal-venice.jpg" };
+            string[] placeParagraph = new string[] { "Piazza San Marco, located in the heart of Venice and situated in front of St. Mark's Basilica and the Doge's Palace, is renowned for its historical and cultural richness. The enchanting atmosphere of the square is further enhanced by a small canal called Rio Batario. Serving as a hub for administrative buildings and hosting live music performances and festivals, the square offers visitors a close-up experience of Venice's unique spirit. Especially in the evening, the illuminated historic structures provide an unforgettable experience. Piazza San Marco, blending Venice's history, art, and vibrant culture, is an essential destination for every visitor.",
+                                                 "Strolling through the enchanting streets of Venice, it's impossible not to stumble upon the iconic  Rialto Bridge, nestled in the heart of the city. Recognizable by its striking architecture and three walkways, you'll see two paths along its outer balustrades and a wider central path lined with shops selling jewelry and souvenirs. Finding the bridge is easy; just follow the signs to 'Rialto' from the train station, San Marco Square, or Piazzale Roma. You can also reach it by water bus; the No 1 line stops at Rialto on its Grand Canal route. Note that the bridge has stairs and is not wheelchair accessible, but its captivating views offer an unforgettable experience for everyone.",
+                                                 "The Grand Canal of Venice stands as one of the most enchanting waterways in the world. This historic canal, surrounded by stunning palaces, ancient bridges, and colorful buildings, offers unparalleled beauty in the heart of Venice. A tour by gondola or vaporetto (water bus) is the best way to explore the soul of this unique city. You'll see iconic structures like the Rialto Bridge and the Accademia Bridge, making it an unforgettable experience for every visitor to Venice. Time spent on the Grand Canal will allow you to fully embrace the magic of Venice."};
+        }
+        @for (int i = 0; i <= 2; i++)
+        {
+            <div class="visit" style="background-color: white; border: 2px solid rgb(28, 28, 56); ">
+                <p class="heading" style="color:rgb(41, 41, 67); font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                    @placeHead[i]
+                </p>
+                <img src=@placeImage[i] style=" width: 90%; margin:5% 5%; border-radius: 2%;" alt="@placeHead[i]">
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                    @placeParagraph[i]
+                </p>
+
+            </div>
+        }
+    </div>
+    <!-- Places div ends -->
+    <!-- Restaurants div starts -->
+    <div style="text-align: center; margin-bottom: 25px;">
+        <p style="font-size: 180%; color: rgb(28, 28, 56); font-size: 35px; font-weight: bold;">
+            Explore Must-Visit Food Destinations in Venice
+        </p>
+    </div>
+    <div class="places" style="display: flex; flex-wrap: wrap;">
+        @{
+            string[] restaurantHead = new string[] { "GIO'S", "Rio Novo restaurant", "Lineadombra", "Ristorante Principessa", "Locanda Cipriani", "Club del Doge Restaurant" };
+            string[] restaurantImage = new string[] { "/Content/images/gio-s-terrace-restoran.jpg", "/Content/images/rio-novo-is-a-high-rated-VENICE.jpg", "/Content/images/ristorante-lineadombra-VENICE.jpg", "/Content/images/Ristorante-Principessa-venice.jpg", "/Content/images/Locanda-Cipriani-venice.jpg", "/Content/images/club-del-doge_venice.jpg" };
+            string[] restaurantParagraph = new string[] {"An Unforgettable Culinary Experience in the Heart of Venice: Gio's Restaurant. During your visit to Venice, don’t just explore the enchanting canals and historic structures, but also experience Gio's Restaurant, which offers some of the best examples of Italian cuisine. Situated on the charming Grand Canal, this elegant restaurant provides guests with memorable moments through both its breathtaking views and meticulously prepared dishes.",
+                                                         "A Hidden Gem in Venice: Rio Novo Restaurant.If you are looking for an authentic Italian dining experience away from the crowds during your Venice trip, Rio Novo Restaurant should definitely be on your list of places to visit. Located in the quieter Dorsoduro district, this charming restaurant blends traditional Italian cuisine with a modern touch. Rio Novo stands out with its simple and elegant decoration. The intimate atmosphere of the restaurant is ideal for both a romantic dinner and a relaxed lunch.",
+                                                         "Venice's Modern Culinary Stop: Lineadombra. Located in the Zattere area of Venice, Lineadombra stands out with its stunning canal views and sophisticated atmosphere. The restaurant is renowned for its modern twist on traditional Italian dishes,  especially its seafood.Its extensive wine list and knowledgeable staff ensure a perfect pairing for every meal. Ideal for romantic evenings and special celebrations, Lineadombra promises an unforgettable dining experience in Venice.",
+                                                         "For those looking to fully immerse themselves in the enchanting atmosphere of Venice, Ristorante Principessa is an excellent choice. This elegant restaurant offers a modern interpretation of classic Italian cuisine, appealing to both the eyes and the palate. The stylish and soothing decor of Ristorante Principessa harmonizes with Venice's historic charm. The extensive menu ranges from fresh seafood to traditional Venetian dishes, with each meal enhanced by suggested wine pairings.",
+                                                         "On your trip to Venice, Locanda Cipriani is a must-visit destination, combining classic Italian elegance with a commitment to culinary excellence. Serving as both a hotel and a restaurant, this historic establishment is situated on Venice's Torcello Island, offering a tranquil escape from the city's hustle and bustle. Locanda Cipriani boasts an elegant and serene atmosphere. Its menu, which adds modern touches to traditional Venetian cuisine, impresses with dishes prepared from fresh, local ingredients.",
+                                                         "Club del Doge stands out with its decor that beautifully blends traditional Venetian style with modern luxury. The restaurant is particularly known for its inventive dishes made with fresh seafood and local ingredients, each masterfully prepared by artisan chefs.  The terrace of the restaurant is a perfect spot to dine while enjoying the unique views of Venice.  Additionally, an extensive wine list and professional service complete the dining experience. dining at Club del Doge will be a highlight of your trip to Venice."};
+            string[] restaurantLink = new string[] { "https://giosrestaurantvenice.com/", "https://rionovoseafood.com/", "https://www.ristorantelineadombra.com/en/", "https://www.ristoranteprincipessa.com/en/", "https://www.locandacipriani.com/en/", "https://www.clubdeldoge.com/" };
+        }
+        @for (int k = 0; k <= 5; k++)
+        {
+            <div class="restaurantsa" style="background-color: white; border: 1px solid rgb(28, 28, 56); border-radius: 3%; ">
+                <h class="headinga" style="color:rgb(41, 41, 67);font-family: Verdana, Geneva, Tahoma, sans-serif;">@restaurantHead[k]</h>
+                <a href=@restaurantLink[k] target="_blank"><img src="@restaurantImage[k]" style="width: 90%; border-radius: 2%; margin: 5% 5%;" alt="@restaurantHead[k]"></a>
+                <p> @restaurantParagraph[k]</p>
+            </div>
+        }
+
+
+    </div>
+    <!-- Restaurants div ends -->
+    <!-- Hotel div starts -->
+    <div class="hotelheada" style="margin: 50px;">
+        <h style="color: rgb(28, 28, 56);  font-size: 35px; "><b>Discover the Perfect Hotels for Your Verona Adventure</b></h>
+    </div>
+    <div class="food" style="display: flex; flex-wrap: wrap;">
+        @{
+            string[] hotelHead = new string[] { "Palazzo Veneziano", "Hotel Moresco", "Rosa Salva Hotel", "Hotel Palazzo Stern", "Ruzzini Palace Hotel", " Hotel Canal Grande" };
+            string[] hotelImage = new string[] { "/Content/images/palazzo-veneziano-HOTEL-VENICE.jpg", "/Content/images/hotel-moresco-venice.jpg", "/Content/images/rosa-salva-hotel-venice.jpg", "/Content/images/hotel-palazzo-stern-venice.jpg", "/Content/images/ruzzini-palace-venice.jpg", "/Content/images/hotel-canal-grande-venice.jpg" };
+            string[] hotelLink = new string[] { "https://www.palazzoveneziano.com/?adblast=1314681305&vbadw=1314681305&gad_source=1&gclid=CjwKCAiA98WrBhAYEiwA2WvhOjqdBmVLQxZ7--ERD7X2VK6PoAhrrMr1Xegskkug895bR5RN1QRdgRoCn_sQAvD_BwE", "https://hotelmorescovenice.com/", "https://www.rosasalvahotel.it/?lang=en", "https://www.palazzostern.it/en", "https://www.ruzzinipalace.com/", "https://www.hotelcanalgrande.it/#/" };
+            string[] hotelParagraph = new string[] {"Palazzo Veneziano: Elegant Escape in the Heart of Venice Overlooking Venice's enchanting canals, Palazzo Veneziano blends historical elegance with modern  comfort. Ideally situated within walking distance of the famous San Marco Square and Rialto Bridge, this impressive hotel is a perfect starting point for exploring the city. With tastefully decorated rooms, Palazzo Veneziano offers a luxurious stay. Discover Venice's unique landscapes through gondola rides from the hotel's own jetty." ,
+                                                "Hotel Moresco: Peaceful Accommodation in the Heart of Venice Hotel Moresco, located a step away from the bustling life of Venice and close to the Santa Lucia train station, is within walking distance to the city's tourist attractions. The hotel blends traditional Venetian style with modern comfort in its rooms, equipped with free Wi-Fi, air conditioning, and a minibar. Hotel Moresco is an ideal choice for those seeking both a central and tranquil stay in Venice.",
+                                                "Rosa Salva Hotel, Venice - Historic and Elegant Accommodation.  Rosa Salva Hotel is ideally located in the heart of Venice, close to St. Mark's Square. Its convenient location offers easy access to historic sites. The hotel stands out with its elegant and comfortable rooms. Offering Italian breakfast, the hotel promises a memorable Venice experience with its friendlyservice and local recommendations.",
+                                                "Hotel Palazzo Stern: Enchanting Stay in the Heart of Venice Hotel Palazzo Stern is an elegant hotel overlooking Venice's historic canals. Its proximity to the Rialto Bridge and St. Mark's Square is noteworthy. The hotel combines modern comfort with the historical elegance of Venetian architecture.  Guests can explore Venice with gondola tours starting from the hotel's own dock. The professional staff is ready to meet all needs, ensuring a memorable stay.",
+                                                "Ruzzini Palace Hotel: Elegant Accommodation in the Heart of Venice Located in the historic heart of Venice, the Ruzzini Palace Hotel is set in an ancient palace overlooking Santa Maria Formosa Square. This hotel is conveniently situated within walking distance of St. Mark's Square and the Rialto Bridge. Ruzzini Palace Hotel is an excellent choice for travelers wanting to intimately experience the history and romance of the city.",
+                                                "Hotel Canal Grande: A Charming Boutique Hotel in the Heart of Venice  Hotel Canal Grande is an elegant boutique hotel overlooking Venice's Grand Canal. Located within walking  distance of the Rialto Bridge and St. Mark's Square, this hotel is an ideal starting point for exploring all the enchantment that the city has to offer. The hotel offers stylish rooms that blend classic Venetian décor with modern comforts."};
+        }
+        @for (int j = 0; j <= 2; j++)
+        {
+            <div class="hotelsa" style=" border: 1px solid rgb(28, 28, 56); border-radius: 3%; background-color:white;">
+                <h class="headinga" style="color:rgb(41, 41, 67);font-family: Verdana, Geneva, Tahoma, sans-serif;">@hotelHead[j]</h>
+                <a href=@hotelLink[j] target="_blank"><img src="@hotelImage[j] " style="width: 90%; margin: 5% 5%;" alt="@hotelHead[j]  "></a>
+                <p>@hotelParagraph[j] </p>
+            </div>
+        }
+    </div>
+
+    <!-- Hotel div ends-->
+    <div style="width: 100%; height: 170px;">
+
+        <p style="text-align: center; padding-top: 50px; font-size: 180%; color: rgb(28, 28, 56);">
+            "Explore our tours for an unforgettable travel adventure... <a style="text-decoration: none; font-weight: bold; color: #007bff;" href="@Url.Action("Tour_List","Home")">Click Here Now!</a>
+        </p>"
+    </div>
+
+    <!-- Last part starts -->
+    <!-- Last part ends -->

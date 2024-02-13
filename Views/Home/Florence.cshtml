@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "Florence";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="florence_color">
+
+    <!--Florence-->
+    <div class="florence">
+        <div class="florence-image" style="display: flex;">
+            <img style="width: 100%;" src="~/Content/images/florenceee.jpg" alt="Header Photo">
+            <p class="textflorence">FLORENCE</p>
+        </div>
+        <!--About-->
+        <div class="about" style="display: flex; margin:30px 5px;">
+            <div class="about-photo1">
+                <img src="~/Content/images/Floransa1.PNG" alt="Florence Photos" style="width:100%; border-radius: 5px;">
+            </div>
+
+            <div class="paragraph">
+                <h class="magic">The Magic of Florence</h>
+                <p style="font-size: 20px;">Florence is a fascinating city in the middle of Italy, on the banks of the Arno River, with deep traces of history. With its rich history from the Middle Ages to the Renaissance, from art to architecture, Florence is like an open-air museum. Once under the influence of the Medici family, this city is a magnet for lovers of art, culture, and history around the world. Florence fascinates not only with its historical and artistic riches, but also with its friendly people and unique atmosphere. This city, every corner and every detail of which tells a story, offers an unforgettable experience to its visitors. When you set foot in Florence, you will be lost in a fairy tale intertwined with history.</p>
+            </div>
+            <div class="about-photo1">
+                <img src="~/Content/images/Florence2.PNG" alt="Florence Photos" style="width:100%; border-radius: 5px;">
+            </div>
+        </div>
+        <!--About End-->
+        <!--Places-->
+        <div class="placehead">
+            <h style=" color:rgb(144, 74, 113); font-size: 35px ;"><b>Places to Visit That Should Be Explored</b></h>
+        </div>
+        <div class="places" style="display: flex; flex-wrap: wrap;">
+            @{
+                string[] placeHead = new string[] { "Florence Cathedral", "Palazzo Vecchio", "Ponte Vecchio", "Piazza della Signoria", "Piazza Santo Spirito", "Galleria degli Uffizi", "Leonardo da Vinci Museum", "Galleria dell’Accademia", "Boboli Gardens" };
+                string[] placeImage = new string[] { "/Content/images/Cathedral.PNG", "/Content/images/palazzo.PNG", "/Content/images/porte.PNG", "/Content/images/signoria.PNG", "/Content/images/spirito.PNG", "/Content/images/uffizi.PNG", "/Content/images/davinci.PNG", "/Content/images/galleria.PNG", "/Content/images/boboli.PNG" };
+                string[] placeParagraph = new string[] { "Florence Cathedral is one of the symbols of Florence. This enormous structure, whose full name is the Cathedral of Santa Maria del Fiore, is home to a rich heritage of history and art from the Middle Ages to the Renaissance.Its construction was completed between 1296 and 1436. Brunelleschi's dome is one of the leading examples of Renaissance architecture. Its interior is notable for its mosaics, stained-glass windows and frescoes by Giotto. Florence Cathedral represents the pinnacle of art and architecture.",
+                                                   "The Palazzo Vecchio is a monument located at the central point of Piazza della Signoria, a historic palace and city square located in Florence, Italy. This impressive structure has witnessed important political and cultural events in Florence's history.The Palazzo Vecchio was built between 1299 and 1314 and was originally known as the Palazzo della Signoria. This historic building was designed by Giotto's student Arnolfo di Cambio and symbolizes the power of Florence of the period. The Salone dei Cinquecento inside the palace is especially famous for the huge frescoes on its walls.",
+                                                   "The Ponte Vecchio is a famous bridge located in Florence, Italy. The Ponte Vecchio is located on the Arno River and is one of the most attractive and familiar landmarks of the city center.First built by the Etruscans, the bridge has been rebuilt and modified many times over time. It gained its present appearance in 1345. Ponte Vecchio attracts attention with its various shops. These shops are businesses that sell gold and jewelry, in particular. One of the most striking features of the Ponte Vecchio is its covered passage in the middle of the bridge.",
+                                                   "Piazza della Signoria refers to a historic square. This square has been the political and cultural center of Florence and has hosted many important events and events. In Italian, the word \"Signoria\" refers to an ancient form of government, and this square symbolizes the political importance of Florence in its history. Piazza della Signoria is an important stopping point for visitors who want to explore Florence's history and art. The atmosphere of the square, the events that have taken place here throughout history, and the important works of art in the square reflect the cultural richness of Florence.",
+                                                   "Piazza Santo Spirito represents an atmospheric and bohemian square. This square is located south of the Ponte Vecchio, beyond the Arno River. Located a little away from the historic center of Florence, this square is a meeting point in the heart of local life and art. There is Basilica di Santo Spirito, Markets, Events, Cafes and Restaurants. Piazza Santo Spirito is famous for its \"Non-Serious Sunday\" events, especially on Sundays.  Artists, locals, and travelers discover the more authentic and traditional side of the city as they stroll through the streets around the square.",
+                                                   " Galleria degli Uffizi is considered one of the most important art museums in the world. The Uffizi Gallery, with its rich collection, houses the greatest representatives of Renaissance art and is a key part of Florence's cultural heritage. The Galleria degli Uffizi was built towards the end of the 16th century. Masterpieces by masters such as Botticelli, Leonardo da Vinci, Michelangelo, Raphael, Caravaggio and Titian are located in this gallery.The Uffizi Gallery is a large U-shaped building located on the banks of the Arno River. The Uffizi Gallery welcomes millions of visitors a year.",
+                                                   "Leonardo da Vinci Museum is a museum located in Florence. This museum showcases the work and inventions of Leonardo da Vinci, the famous Renaissance-era artist, scientist, and inventor. The museum displays a range of original documents, including drawings, manuscripts, and designs from Leonardo da Vinci's notebooks. These documents contain important information about the artist's painting, engineering, anatomical studies and inventions. The museum organizes various events and workshops with the aim of making Leonardo da Vinci's work more interactive. The Leonardo da Vinci Museum offers an unforgettable experience for art lovers and science enthusiasts.",
+                                                   "In Florence, Italy, there is an art museum called the Galleria dell'Accademia. His most famous work is the David statue by Michelangelo1. In 1873, this statue was relocated to the museum from Piazza della Signoria. The world's largest collection of sculptures by Michelangelo is kept in this museum. Numerous collections of artwork and musical instruments from the fifteenth and sixteenth centuries are also housed there. The museum features artwork by numerous painters, including Bernardo Daddi, Filippino Lippi, Sandro Botticelli, Bartolomeo Cristofori, Pontormo, Antonio Stradivari, Odoardo Borrani, Lorenzo Monaco, and Lorenzo Bartolini, in addition to Michelangelo.",
+                                                   "A historic park is Boboli Gardens. One of the most well-known Italian gardens, Boboli Gardens, has a collection of notable sculptures from the 16th and 17th century as well as historic Roman artifacts that make it appear like an outdoor museum.The garden features broad gravel pathways and geometric design arrangements.The park and caves also feature a large number of man-made and natural fountains. The garden is divided into areas that are private and public. To irrigate the garden, a canal was constructed using water extracted from the Arno River. Situated on 111 acres lies the garden. It is among Europe's most excellent royal gardens."};
+            }
+            @for (int i = 0; i <= 8; i++)
+            {
+                <div class="visit">
+                    <h class="heading">@placeHead[i]</h>
+                    <img src="@placeImage[i]" style="width: 90%; margin: 5% 5%;" alt="@placeHead[i]">
+                    <p>@placeParagraph[i]</p>
+                </div>
+
+
+            }
+
+
+
+        </div>
+        <!--Places End-->
+        <!--Food-->
+        <div class="foodhead" style="margin: 50px;">
+            <h style=" color:rgb(144,74,113); font-size: 35px; "><b>Pleasant Restaurants in Florence</b></h>
+        </div>
+        <div class="food" style="display: flex; flex-wrap: wrap;">
+            @{
+                string[] restaurantHead = new string[] { "Trattoria Marione", "Golden View", "La Bottega del Buon Caffè" };
+                string[] restaurantLink = new string[] { "https://www.casatrattoria.com/trattoria-marione/",
+                                                                "https://goldenview.it/en/" , "https://www.borgointhecity.com/"};
+                string[] restaurantParagraph = new string[] {"Trattoria Marione is located in the heart of Florence's historic centre, on one of the city's most elegant streets. Its interior has two floors. Cheerful and familiar atmosphere, colorful food, good food and an enviable wine cellar: these are the ingredients that make Trattoria Marione one one of the favorite places even for the most famous personalities of sports and entertainment."
+                                                                 ,"Golden View Florence is one of Florence's most scenic restaurants. It is located on the banks of the Arno River, overlooking the Ponte Vecchio bridge and the Uffizi Gallery. Golden View Florence offers Italian, seafood and healthy meals. Vegetarian, vegan, and gluten-free options are also available. Golden View Florence is ideal for special occasions, romantic evenings, large groups and a bar scene. There are also live music performances. Golden View Florence recommends making a reservation."
+                                                                 ,"La Bottega del Buon Caffè is a Michelin-starred restaurant. With the concept of Plate from the Farm, the restaurant offers dishes prepared with the freshest ingredients collected from its own gardens.The menus are designed to reflect Tuscanys unique gastronomic heritage and vibrant culinary culture. The restaurants seasonal menus are prepared with meat from local producers and the freshest fish from the Mediterranean. The interior of the restaurant was designed by the famous international designer Jeanette Thottrup and combines classic Florentine style with a modern twist." };
+
+                string[] restaurantImage = new string[] { "/Content/images/mariona.PNG", "/Content/images/golden.PNG ", "/Content/images/buon.PNG" };
+            }
+            @for (int k = 0; k <= 2; k++)
+            {
+                <div class="restaurants">
+                    <h class="heading">@restaurantHead[k]</h>
+                    <a href=@restaurantLink[k] target="_blank"> <img src="@restaurantImage[k]" style="width: 90%; margin: 5% 5%;" alt=@restaurantHead[k]></a>
+                    <p>@restaurantParagraph[k] </p>
+                </div>
+            }
+
+        </div>
+        <!--Food End-->
+        <!--Hotel-->
+
+        <div class="hotelhead" style="margin: 50px;">
+            <h style=" color:rgb(144,74,113); font-size: 35px; "><b>Beautiful Hotels in Florence</b></h>
+        </div>
+        @{
+            string[] hotelHead = new string[] { "Opera Boutigo B&B", " Attico Ponte Vecchio", "Relais Hotel Centrale Dimora Storica" };
+            string[] hotelImage = new string[] { "/Content/images/b&b.PNG", "/Content/images/attico.PNG", "/Content/images/cosa.PNG" };
+            string[] hotelLink = new string[] { "https://www.operabeb.it/en/", "https://www.booking.com/hotel/it/attico-ponte-vecchio-vista-duomo-parking-terrazzo.en-gb.html", "https://www.hotelcentralefirenze.it/en/" };
+            string[] hotelParagraph = new string[] { "Opera Boutique B&B is a boutique hotel and breakfast in Firenze. It is housed in a renovated neoclassical building built at the end of the 19th century. Opera Boutique B&B offers a stylish and relaxed holiday for couples. It strikes a balance between class and simplicity with the Urban & Unique concept, which combines the classic and prestigious style of a large hotel with the freedom of the breakfast formula12. Rooms at Opera Boutique B&B feature high ceilings, wooden floors and antique furnishings. Opera Boutique B&B offers a friendly and authentic atmosphere, away from the busiest tourist streets of Firenze. All the main tourist attractions can be reached on foot in less than 15 minutes.",
+                                                     "Attico Ponte Vecchio Vista is an apartment located in the centre of Firenze, a short distance from the Ponte Vecchio and the Uffizi Gallery. An Italian, vegetarian or vegan breakfast is available each morning. If you wish to explore the area, you can ride a bike nearby and arrange apartment car rental. Popular points of interest near Attico Ponte Vecchio Vista include Palazzo Vecchio, Piazza della Signoria and Cathedral of Santa Maria del Fiore. The nearest airport is Firenze Airport, 12 km from the property, and the property offers a chargeable airport shuttle service. These apartments are great options for those looking for a comfortable and luxurious stay in Firenze.",
+                                                     "Relais Hotel Centrale \"Dimora Storica\" is a hotel located in a renovated historic building in the center of Florence, close to the Duomo and the main monuments of the city. The hotel is a short distance from Santa Maria Novella train station, Fortezza da Basso, which hosts the most important trade fairs, and Palazzo Dei Congressi. The hotel's rooms are decorated with replicas of paintings and frescoes by famous artists, offering a quiet and comfortable environment. From most rooms you can see a view of the nearby monuments.Relais Hotel Centrale \"Dimora Storica\" is the perfect choice for a historical and cultural holiday in Florence."};
+        }
+        <div class="food" style="display: flex; flex-wrap: wrap;">
+            @for (int j = 0; j <= 2; j++)
+            {
+
+                <div class="hotels">
+                    <h class="heading">@hotelHead[j]</h>
+                    <a href=@hotelLink[j] target="_blank"><img src="@hotelImage[j]" style="width: 90%; margin: 5% 5%;" alt="@hotelHead[j]"></a>
+                    <p>@hotelParagraph[j]</p>
+                </div>
+            }
+        </div>
+        <!--Hotel End-->
+        <div style="font-family: 'Agbalumo'; font-size: 35px; color: black;  text-align: center; margin:2% 15%">Are you ready to collect unforgettable memories <a href="@Url.Action("Tour_List","Home")">with us</a> in the streets of Florence full of history? </div>
+        <!--Florence End-->
+    </div>
+</div>
